@@ -225,18 +225,18 @@ if unicodeEncoding is not None:
         sys.setdefaultencoding(unicodeEncoding)
         del sys.setdefaultencoding
 
-try:
-    # See if there is a multi-version install of wxPython
-    if not hasattr(sys, 'frozen'):
-        import wxversion
-        if wxVersionSelect is None:
-            wxversion.ensureMinimal('2.5')
-        else:
-            wxversion.select(wxVersionSelect)
-except ImportError:
-    # Otherwise assume a normal 2.4 install, if it isn't 2.4 it will
-    # be caught below
-    pass
+# try:
+#     # See if there is a multi-version install of wxPython
+#     if not hasattr(sys, 'frozen'):
+#         import wxversion
+#         if wxVersionSelect is None:
+#             wxversion.ensureMinimal('2.5')
+#         else:
+#             wxversion.select(wxVersionSelect)
+# except ImportError:
+#     # Otherwise assume a normal 2.4 install, if it isn't 2.4 it will
+#     # be caught below
+#     pass
 
 import wx
 wx.RegisterId(15999)

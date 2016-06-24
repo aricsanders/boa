@@ -19,10 +19,10 @@ eols = {  wx.stc.STC_EOL_CRLF : '\r\n',
           wx.stc.STC_EOL_CR   : '\r',
           wx.stc.STC_EOL_LF   : '\n'}
 
-import Boa.Preferences as Preferences
-from Boa.Utils import _
+import Preferences
+from Utils import _
 
-import Boa.methodparse
+import methodparse
 import STCStyleEditor
 
 # from PythonWin from IDLE :)
