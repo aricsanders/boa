@@ -11,8 +11,8 @@
 #-----------------------------------------------------------------------------
 
 """ Global namespace for general IDE window ids, image indexes and registries """
-import Preferences as Preferences
-import Utils as Utils
+import boa.Preferences as Preferences
+import boa.Utils as Utils
 
 (wxID_EDITOROPEN, wxID_EDITORSAVE, wxID_EDITORSAVEAS, wxID_EDITORCLOSEPAGE,
  wxID_EDITORREFRESH, wxID_EDITORDESIGNER, wxID_EDITORDEBUG, wxID_EDITORHELP,

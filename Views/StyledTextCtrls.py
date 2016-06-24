@@ -19,10 +19,10 @@ eols = {  wx.stc.STC_EOL_CRLF : '\r\n',
           wx.stc.STC_EOL_CR   : '\r',
           wx.stc.STC_EOL_LF   : '\n'}
 
-import Preferences
-from Utils import _
+import boa.Preferences as Preferences
+from boa.Utils import _
 
-import methodparse
+import boa.methodparse
 import STCStyleEditor
 
 # from PythonWin from IDLE :)
@@ -395,7 +395,7 @@ class CallTipCodeHelpSTCMix(CodeHelpStyledTextCtrlMix):
         self.lastCallTip = ''
         self.lastTipHilite = (0, 0)
 
-        self.CallTipSetBackground(Preferences.STCCallTipBackColour)
+        self.CallTipSetBackground(boa.Preferences.STCCallTipBackColour)
 
     def getTipValue(self, word, lnNo):
         return ''
@@ -754,7 +754,7 @@ class LanguageSTCMix:
             self.SetSelectionStart(self.GetCurrentPos())
 
 
-stcConfigPath = os.path.join(Preferences.rcPath, 'stc-styles.rc.cfg')
+stcConfigPath = os.path.join(boa.Preferences.rcPath, 'stc-styles.rc.cfg')
 
 class PythonStyledTextCtrlMix(LanguageSTCMix):
     def __init__(self, wId, margin):
